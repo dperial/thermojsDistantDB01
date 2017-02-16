@@ -1,0 +1,15 @@
+<h2 class="page-header">Thermometer</h2>
+<p>Welcome to your Thermometer Homepage</p>
+{{temp}}°C
+{{#if errors}}
+      {{#each errors}}
+      	<div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<form method="post" action="/users/index">
+  <div class="form-group">
+    <label>Temperature</label>
+    <input type="text" class="form-control" name="temperature" placeholder="Temperature">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
